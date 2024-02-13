@@ -1,2 +1,4 @@
 10.0.2.2 - - [13/Feb/2024:10:15:55 +0000] "GET /index.php HTTP/1.1" 200 427 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 10.0.2.2 - - [13/Feb/2024:10:16:27 +0000] "GET /index.php HTTP/1.1" 200 347 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+10.0.2.2 - - [13/Feb/2024:14:18:24 +0000] "GET /index.php HTTP/1.1" 200 347 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+10.0.2.2 - - [13/Feb/2024:14:18:24 +0000] "GET /favicon.ico HTTP/1.1" 200 347 "http://localhost:8000/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
