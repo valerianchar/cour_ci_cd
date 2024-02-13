@@ -1,0 +1,28 @@
+name: PHP Web CI
+
+on: 
+  push:
+    branch: ["main"]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Compose
+      run: sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose
+
+    - name: Build and Start Containers
+      run: docker compose up -d
+
+    - name: Wait for Application to be Ready
+      run: sleep 30 # Ajustez ce délai selon le temps nécessaire à votre application pour démarrer
+
+    - name: Display Web Page
+      run: curl http://localhost # Ajustez l'URL selon la configuration de votre application
+
+    - name: Stop and Remove Containers
+      run: docker compose down
