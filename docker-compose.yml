@@ -41,17 +41,18 @@ services:
     environment:
       REPO_URL: https://github.com/valerianchar/cour_ci_cd
       RUNNER_NAME: ci_cd_charrier_papazian
-      RUNNER_TOKEN: AWNTMRISCKPR5A23O4IG3G3FZOCRY
+      RUNNER_TOKEN: AWNTMRNYUBQHHE6GEXZMJU3FZ47QG
       RUNNER_WORKDIR: /actions_runners
       RUNNER_GROUP: default
       RUNNER_SCOPE: 'repo'
       LABELS: linux,x64,gpu
+      ORG_RUNNER: 'false'
     security_opt:
       # needed on SELinux systems to allow docker container to manage other docker containers
       - label:disable
     volumes:
-      - './actions_runners/run/docker.sock:/var/run/docker.sock'
-      - './actions_runners/runner:/tmp/runner'
+      - '/actions_runners/run/docker.sock:/var/run/docker.sock'
+      - '/actions_runners/runner:/tmp/runner'
       # note: a quirk of docker-in-docker is that this path
       # needs to be the same path on host and inside the container,
       # docker mgmt cmds run outside of docker but expect the paths from within
